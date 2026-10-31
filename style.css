@@ -159,3 +159,44 @@ table.days td:nth-child(4)::before{content:"Stay: ";font-weight:600}}
 .pick{display:inline-block;background:#d9627f;color:#fff;border-radius:4px;padding:1px 8px;font-size:.8em;margin-left:6px;vertical-align:middle}
 .pin-town span{background:#6d4c41;border-radius:3px}
 .dot.dt{background:#6d4c41;border-radius:2px}
+/* v2: overview + featured route */
+.kmap.big{height:600px}.kmap.city{height:440px}
+@media (max-width:640px){.kmap.big{height:480px}.kmap.city{height:380px}}
+.pin-num span{display:flex;align-items:center;justify-content:center;background:#c2185b;color:#fff;font:700 14px/1 system-ui,sans-serif;border:2px solid #fff;border-radius:50%;box-shadow:0 1px 5px rgba(0,0,0,.5)}
+.pin-xfer span{background:#fff;border:3px solid #333;border-radius:50%}
+.pin-stn span{background:#7a7a7a}.pin-sight span{background:#7b4fa0;border-radius:3px;transform:rotate(45deg)}
+.leglbl span{display:inline-block;white-space:nowrap;background:#fff;border:2px solid;border-radius:999px;padding:1px 8px;font:600 12px/1.5 system-ui,sans-serif;color:#222;box-shadow:0 1px 3px rgba(0,0,0,.25);transform:translate(-50%,-50%)}
+.leaflet-tooltip.plbl{background:rgba(255,255,255,.92);border:0;box-shadow:0 1px 3px rgba(0,0,0,.25);font:600 12px/1.3 system-ui,sans-serif;padding:1px 6px;color:#222}
+.leaflet-tooltip.plbl:before{display:none}
+.dot.dn{background:#c2185b;color:#fff;font:700 10px/14px system-ui,sans-serif;text-align:center;width:16px;height:16px;font-style:normal}
+.dot.dx{background:#fff;box-shadow:0 0 0 2px #333}.dot.dg{background:#7b4fa0;border-radius:2px;transform:rotate(45deg);width:11px;height:11px}
+.ln.dash{background:repeating-linear-gradient(90deg,#777 0 4px,transparent 4px 8px)!important}
+.map-tools.tg button{display:inline-flex;align-items:center;gap:6px}.map-tools.tg button:not(.on){opacity:.6;text-decoration:line-through}
+.map-tools.tg button.on{background:var(--card);color:var(--ink);border-color:var(--ink)}
+.stops{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.stop{flex:1 1 110px;display:flex;flex-direction:column;align-items:flex-start;gap:2px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:var(--card);text-decoration:none;color:var(--ink)}
+.stop b{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#c2185b;color:#fff;font-size:13px}
+.stop span{font-weight:600}.stop small{color:var(--muted)}
+.featured{border:2px solid #c2185b;border-radius:18px;padding:18px 18px 8px;background:linear-gradient(#fff6f9,#fff 240px)}
+@media (max-width:640px){.featured{padding:14px 10px 6px;border-radius:14px}}
+.eyebrow2{margin:0;color:#c2185b;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+.featured h3{margin-top:28px}
+.sights{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin:14px 0}
+.sight{border:1px solid var(--line);border-radius:14px;padding:10px;background:var(--card)}
+.sight h4{margin:8px 0 4px}
+.hpicks{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin:12px 0}
+.hpick{border:2px solid #2f4a7a;border-radius:14px;padding:10px;background:var(--card)}
+.hpick .tag{margin:0 0 6px;font-weight:700;color:#2f4a7a;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
+.hpick h4{margin:8px 0 4px}
+details.route.alt{border:1px solid var(--line);border-left:5px solid var(--c);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--card)}
+details.route.alt summary{cursor:pointer;line-height:1.6}
+tr.ctx td{background:#f7f4f5;color:var(--muted)}
+table.trains td{vertical-align:top}
+@media (max-width:640px){.sights,.hpicks{grid-template-columns:1fr}}
+table.trains td,table.trains th,table.dist td,table.dist th{white-space:normal;vertical-align:top}
+table.trains td:first-child{white-space:nowrap}
+@media (max-width:640px){table.trains,table.trains tbody,table.trains tr,table.trains td{display:block;width:100%}table.trains thead{display:none}table.trains tr{border-bottom:1px solid var(--line);padding:6px 0}table.trains td{border:0;padding:3px 10px}
+table.dist td,table.dist th{padding:8px 8px}}
+.featured,.featured *{min-width:0}
+.kmap.zlo .plbl.minor{display:none}
+@media (max-width:640px){.leglbl span{font-size:10.5px;padding:0 6px}.leaflet-tooltip.plbl{font-size:11px}}
